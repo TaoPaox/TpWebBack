@@ -8,11 +8,11 @@ import lombok.Data;
 @Data
 public class UserInfo {
     @ApiModelProperty("用户姓名")
-    private String name;
+    public String name;
     @ApiModelProperty("年龄")
-    private int age;
+    public int age;
     @ApiModelProperty("手机号")
-    private String mobile;
+    public String mobile;
     @ApiModelProperty("性别")
-    private String sex;
+    public String sex;
 }

@@ -29,7 +29,24 @@ public class LoginController {
     @RequestMapping(value = "/api/v1/login", method = {RequestMethod.POST})
     @ResponseBody
     public UserInfo login(String account, String password) {
-        return mUserService.get(1);
+        return mUserService.get(2);
+    }
+
+
+
+
+    //此注解对接口的说明
+    @ApiOperation("登陆2")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "account", value = "账号", required = true, paramType = "string"),
+            @ApiImplicitParam(name = "password", value = "密码", required = true, paramType = "string"),
+    })
+    @RequestMapping(value = "/api/v1/login2", method = {RequestMethod.GET})
+    @ResponseBody
+    public String login2() {
+
+        return "mUserService.get(2)："+mUserService.get(2).name;
     }
 }
+
 

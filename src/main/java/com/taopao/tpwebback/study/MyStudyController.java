@@ -27,7 +27,7 @@ public class MyStudyController {
     public String getCurrentTime() {
         Date date = new Date();
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd :hh:mm:ss");
-        return dateFormat.format(date);
+        return "当前时间："+dateFormat.format(date);
     }
 
     @ApiOperation("测试json请求")
